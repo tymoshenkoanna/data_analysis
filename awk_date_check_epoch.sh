@@ -32,7 +32,7 @@ awk -F';'  -v exp_1_date="$exp_1_date" -v exp_2_date="$exp_2_date" -v exp_3_date
         else if($3 <= exp_2_date && $3 > exp_3_date && $2 ~/^'Exc'/){$2="Exception (expiring 2)";print $0;}
         else if($3 <= exp_2_date && $3 > exp_3_date){$2="Expiring 2";print $0;}
         else if($3 <= exp_1_date && $3 > exp_2_date && $2 ~/^'Exc'/){$2="Exception (expiring 1)";print $0;}
-        else if($3 <= exp_1_date && $3 > exp_2_date){$2="Exiring 1";print $0;}
+        else if($3 <= exp_1_date && $3 > exp_2_date){$2="Expiring 1";print $0;}
         else if($3 > exp_1_date && $2 ~/^'Exc'/){$2="Exception (selling)";print $0;}
         else if($3 > exp1_date){$2="Selling";print $0;}
         else if($3 == "Not available"){print $0}
